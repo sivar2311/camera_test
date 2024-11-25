@@ -5,12 +5,12 @@
 
 #include "camera.h"
 
-const char* WIFI_SSID = "SinricWiFi";
-const char* WIFI_PASS = "SinricWiFi";
+const char* WIFI_SSID = "";
+const char* WIFI_PASS = "";
 
-const char* DEVICE_ID  = "6741903cdb15b093899448af";
-const char* APP_KEY    = "ebf0cf46-97a2-4c4e-8cf3-e630e9b640ca";
-const char* APP_SECRET = "5690fc71-938c-4174-a1de-270c2c3cffef-ffc31556-4219-4043-bb59-d2f6ac372d21";
+const char* DEVICE_ID  = "";
+const char* APP_KEY    = "";
+const char* APP_SECRET = "";
 
 bool handleSnapshot(const String& deviceId) {
     camera_fb_t* fb = esp_camera_fb_get();
