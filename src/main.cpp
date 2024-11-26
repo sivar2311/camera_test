@@ -21,7 +21,7 @@ bool handleSnapshot(const String& deviceId) {
     }
     SinricProCamera& myCamera = SinricPro[deviceId];
 
-    int result = myCamera.uploadImage(fb->buf, fb->len);
+    int result = myCamera.sendSnapshot(fb->buf, fb->len);
 
     esp_camera_fb_return(fb);
 
