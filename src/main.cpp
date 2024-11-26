@@ -12,7 +12,7 @@ const char* DEVICE_ID  = "";
 const char* APP_KEY    = "";
 const char* APP_SECRET = "";
 
-bool handleSnapshot(const String& deviceId) {
+bool onSnapshot(const String& deviceId) {
     camera_fb_t* fb = esp_camera_fb_get();
 
     if (!fb) {
@@ -47,7 +47,7 @@ void setupWiFi() {
 void setupSinricPro() {
     SinricProCamera& myCamera = SinricPro[DEVICE_ID];
     myCamera.onPowerState(onPowerState);
-    myCamera.onSnapshot(handleSnapshot);
+    myCamera.onSnapshot(onSnapshot);
     SinricPro.onConnected([]() { Serial.printf("Connected to SinricPro\r\n"); });
     SinricPro.onDisconnected([]() { Serial.printf("Disconnected from SinricPro\r\n"); });
 
